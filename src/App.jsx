@@ -5,6 +5,7 @@ import HeaderLogo from "./assets/Header-Menu-Left.png"
 import Products from "./pages/Product";
 
 function App() {
+  
   const configuration = getAppConfiguration();
   console.log(configuration, "-getAppConfigration")
   // Apply the configuration to your components
