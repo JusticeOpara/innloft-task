@@ -37,7 +37,7 @@ export default function Map() {
   ];
 
   return (
-    <MapContainer center={[5.5096, 7.0391]} zoom={13}  className=" mt-40 h-[63vh] w-[100vw] fixed rounded-lg">
+    <MapContainer center={[5.5096, 7.0391]} zoom={13}  className=" mt-40 h-full w- fixed rounded">
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

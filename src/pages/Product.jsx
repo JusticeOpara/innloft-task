@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import Videoplayer from "./VideoPlayer";
 
 const ProductDetails = () => {
     const [product, setProduct] = useState(null);
@@ -28,7 +28,7 @@ const ProductDetails = () => {
     return (
         <>
 
-            <div className="w-[65%] h-[1364px] left-[300px] top-[55px] absolute gap-5 flex flex-col  bg-blue-500">
+            <div className="w-[76%] h-[1364px] left-[323px] top-[55px] absolute gap-5 flex flex-col  bg-blue-500">
 
                 <div className="w-full h-[30px] bg-gray-500 rounded-[6px]   ">
                     <div className="flex items-center text-center">
@@ -56,20 +56,99 @@ const ProductDetails = () => {
 
 
                 </div>
-                <div className="w-full h-[500px] bg-slate-50 rounded-lg p-2 gap-10 flex flex-row">
-                    <div className="h-full w-[500px] bg-slate-700 flex flex-col gap-5 ">
-                        <div className="">
+
+                <div className="w-full h-[600px]  bg-slate-50 rounded-lg  gap-[20px] flex flex-row">
+                    <div className="h-full w-[80%] bg-slate-700 flex flex-col gap-2.5 ">
+
+                        <img src={product.picture} className="w-full h-[350px] bg-blue-200" alt="Product" />
+
+
+                        <div className="w-full h-[250px] bg-emerald-300 p-5 gap-2.5 flex flex-col items-start self-stretch;">
+                            <h1 className="font-bold text-base">Intelligent Finite elements in Structural mechanics</h1>
+                            <p className="text-xs font-medium">{product.description}</p>
+
+                        </div>
+                    </div>
+
+                    <div className="h-full w-[42%] bg-teal-600 flex flex-col items-start self-stretch p-5  border-l-[RED]">
+
+                        <div className="w-full h-[450px] flex flex-col justify-center items-start gap-2.5 bg-white">
+                            <p className="text-base font-semibold not-italic font-[Open Sans] ">Offer By </p>
+                            <img src={product.company.logo} className="w-[200px] h-[36.315px]" alt="Company Logo" />
+
+                            <div className="bg-green-400 flex flex-row w-full items-center">
+
+                                <img src={product.user.profilePicture} className="rounded-[50%] w-10 bg-black" alt="User" />
+
+                                <div className="flex flex-col">
+
+                                    <p>{product.user.firstName} {product.user.lastName}</p>
+                                    <p>{product.company.name}</p>
+                                </div>
+
+                            </div>
+                            <div className="text-sm h-[40px] w-full bg-orange-400">
+                                <p>{product.company.address.street},{product.company.address.house},</p>
+                                <p>{product.company.address.zipCode} {product.company.address.city.name}, {product.company.address.country.name}</p>
+                            </div>
+
 
                         </div>
 
-                        <div className="w-full h-60 bg-emerald-300"></div>
-                    </div>
+                        <div className="w-full h-full bg-indigo-600 self-stretch">
 
-                    <div className="h-full w-[10px] bg-teal-600  ">
-
+                        </div>
                     </div>
 
                 </div>
+                {/* Videoplayer section */}
+                <div className="w-full h-[484px] bg-gray-500 rounded  p-5 flex flex-col items-center justify-center gap-[20px]">
+
+                    <div className=" self-stretch flex flex-col justify-center items-start gap-[10px] bg-white">
+                        <h1 className="text-base font-medium not-italic font-[Open Sans] ">Video</h1>
+
+                    </div>
+                    <Videoplayer />
+                </div>
+
+
+                {/* Details Section */}
+                <div className="w-full h-[230px] bg-yellow-200 self-stretch flex items-start flex-col py-[30px] px-[20px] gap-2.5">
+
+                    <div className="w-full h-full bg-white gap-5 flex flex-col items-start self-stretch">
+                        <div className="gap-5 w-full h-6 bg-red-200 self-stretch flex items-center">
+                        <h1 className="text-base font-medium not-italic font-[Open Sans] ">Offer</h1>
+                        </div>
+                       
+
+
+                        <div className="w-full h-full flex flex-col justify-center items-start gap-[20px] bg-lime-400">
+                            <div className=" flex items-start gap-10 self-stretch">
+                                <div className="w-[525px] h-[58px]  bg-black" >
+                                    fhgfhg
+                                </div>
+
+                                <div className="w-[525px] h-[58px] bg-white">
+                                    gfhgfhf
+                                </div>
+
+                            </div>
+                            <div className=" flex items-start gap-10 self-stretch">
+                 
+                                <div className="w-[525px] h-[58px] bg-green-200">
+                                    hgfhf
+                                </div>
+                                <div className="w-[525px] h-[58px] bg-slate-600">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
 
             </div>
 
@@ -99,9 +178,10 @@ export default ProductDetails;
       <h2>User Info:</h2>
       <img src={product.user.profilePicture} alt="User" />
       <p>Name: {product.user.firstName} {product.user.lastName}</p>
-      <p>Email: {product.user.email}</p>
+      <p>Email: </p>
       <p>Position: {product.user.position}</p>
       <h2>Company:</h2>
       <img src={product.company.logo} alt="Company Logo" />
-      <p>Company Name: {product.company.name}</p> */}
-{/* <p>Address: {product.company.address.street} {product.company.address.house}, {product.company.address.zipCode} {product.company.address.city.name}, {product.company.address.country.name}</p> */ }
+      <p>Company Name: </p> */}
+{/* <p>Address: {product.company.address.street}  
+{product.company.address.zipCode} {product.company.address.city.name}, {product.company.address.country.name}</p> */ }
