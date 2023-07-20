@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <div className="bg-gray-200 h-[1449px] w-[100%] ">
+    <div className="bg-gray-200 h-[2549px] w-[100%] ">
       <header style={headerStyle} >
         <img src={configuration.logo} style={{
           width: "140px",
