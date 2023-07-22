@@ -2,15 +2,19 @@ import React from 'react'
 import Pics from "../assets/profile.png"
 import homeIcon from "../assets/home-icon.svg"
 import memberIcon from "../assets/inno_group.svg"
+import Auth from './Auth'
+// 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
+
+
 
 export default function MainPage() {
 
     return (
 
-        <div className='w-[full] h-[100vh] bg-slate-500 flex justify-start '>
-            <div className="w-[300px] h-full  bg-white rounded-lg ml-1 flex flex-col gap-10">
+        <div className='w-[full] lg:h-[91vh] bg-slate-500 flex justify-start '>
+            <div className="w-[340px] h-full  p-4 bg-white rounded-xl flex flex-col gap-5">
 
-                <div className='w-full bg-red-100 flex gap-4 items-center'>
+                <div className='w-full bg-rerd-100 flex gap-4 items-center'>
 
                     <img src={Pics} className="w-[100px] h-[100px] rounded-[50%]" alt='pic' />
 
@@ -29,6 +33,15 @@ export default function MainPage() {
                 <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
                     <img src={memberIcon} className="w-8" alt="member" />
                     <p className='text-[20px] font-medium '>Member</p>
+                </div>
+
+                <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151]'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="white" d="m9.31 17l2.44-2.44L14.19 17l1.06-1.06l-2.44-2.44l2.44-2.44L14.19 10l-2.44 2.44L9.31 10l-1.06 1.06l2.44 2.44l-2.44 2.44L9.31 17zM19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
+                    </svg>
+                    <p className="text-[20px] font-medium ">Events</p>
+
+
                 </div>
 
                 <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
@@ -61,7 +74,9 @@ export default function MainPage() {
                         </svg>
                     </span>
                 </div>
+
             </div>
+            <Auth/>
         </div>
 
     )

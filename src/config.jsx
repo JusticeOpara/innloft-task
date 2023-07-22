@@ -8,7 +8,6 @@ const configurations = {
       height:"55px" ,
       width: "100%",
       display: "fixed",
-
       hasUserSection: true
     },
     2: {

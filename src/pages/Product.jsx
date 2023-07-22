@@ -26,11 +26,11 @@ const ProductDetails = () => {
     if (!product) {
         return <p>Loading...</p>;
     }
-
+    
     return (
         <div className="flex justify-center w-full">
 
-            <div className="w-[80%] hr-[1364px] top-[55px] gap-5 flex flex-col  bg-blue-500">
+            <div className="w-[80%] hr-[2549px] top-[55px] gap-5 flex flex-col  bg-blue-500">
 
                 <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 

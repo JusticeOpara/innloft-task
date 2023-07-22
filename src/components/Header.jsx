@@ -159,7 +159,7 @@ export default function () {
 
 
             </div>
-
+            {/* {configuration.hasUserSection && <UserInfoSection />} */}
         </header>
     )
 }
