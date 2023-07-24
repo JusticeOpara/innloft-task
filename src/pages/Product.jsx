@@ -26,7 +26,7 @@ const ProductDetails = () => {
     if (!product) {
         return <p>Loading...</p>;
     }
-    
+
     return (
         <div className="flex justify-center w-full">
 
@@ -61,7 +61,7 @@ const ProductDetails = () => {
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 14.7071C6.90237 14.3166 6.90237 13.6834 7.29289 13.2929L10.5858 10L7.29289 6.70711C6.90237 6.31658 6.90237 5.68342 7.29289 5.29289C7.68342 4.90237 8.31658 4.90237 8.70711 5.29289L12.7071 9.29289C13.0976 9.68342 13.0976 10.3166 12.7071 10.7071L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071Z" fill="#9CA3AF" />
                             </svg>
                             <h1 className="font-bold text-lg text-[#6B7280]">{product.name}</h1>
-                           
+
                         </div>
 
                     </div>
@@ -69,7 +69,7 @@ const ProductDetails = () => {
 
                     <button className="flex justify-end h-[30px] py-[5px] px-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white">Edit</button>
 
-        
+
                 </div>
 
                 <div className="w-full h-[750px]  bg-slate-500 rounded-lg  gap-[20px] flex flex-row">
@@ -84,7 +84,7 @@ const ProductDetails = () => {
 
                         </div>
                     </div>
-                      <div className="h-[600px] w-[42%] bg-teal-600 flex flex-col items-start self-stretch p-5  border-l-[RED]">
+                    <div className="h-[600px] w-[42%] bg-teal-600 flex flex-col items-start self-stretch p-5  border-l-[RED]">
 
                         <div className="w-full h-[450px] flex flex-col justify-center items-start gap-2.5 bg-white">
                             <p className="text-base font-semibold not-italic font-[Open Sans] ">Offer By </p>
@@ -111,12 +111,12 @@ const ProductDetails = () => {
 
                         <Map />
 
-                    </div> 
+                    </div>
 
 
-                    
+
                 </div>
-               
+
 
 
                 {/* Videoplayer section */}
@@ -287,26 +287,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-{/* <h1>{product.name}</h1> */ }
-{/* <img src={product.picture} alt="Product" /> */ }
-{/* <p>{product.description}</p> */ }
-{/* <p>Type: {product.type.name}</p>
-                <p>Categories:</p>
-                <ul>
-                    {product.categories.map((category) => (
-                        <li key={category.id}>{category.name}</li>
-                    ))}
-                </ul> */}
-{/* <p>Investment Effort: {product.investmentEffort}</p>
-      <p>TRL: {product.trl.name}</p>
-      <p>Video: <a href={product.video}>{product.video}</a></p>
-      <h2>User Info:</h2>
-      <img src={product.user.profilePicture} alt="User" />
-      <p>Name: {product.user.firstName} {product.user.lastName}</p>
-      <p>Email: </p>
-      <p>Position: {product.user.position}</p>
-      <h2>Company:</h2>
-      <img src={product.company.logo} alt="Company Logo" />
-      <p>Company Name: </p> */}
-{/* <p>Address: {product.company.address.street}  
-{product.company.address.zipCode} {product.company.address.city.name}, {product.company.address.country.name}</p> */ }
