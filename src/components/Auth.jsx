@@ -11,7 +11,6 @@ const Auth = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(authActions.loggedIn())
-
     }
 
     const handleClick = () => {

@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Videoplayer from "./VideoPlayer";
 import Map from "./Map";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
     const [product, setProduct] = useState(null);
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate('/editProduct');
+    }
 
     useEffect(() => {
         const fetchProductData = async () => {
@@ -20,17 +26,17 @@ const ProductDetails = () => {
 
     }, []);
 
-    console.log(product
-        , "--ProductData")
+    // console.log(product
+    //     , "--ProductData")
 
     if (!product) {
         return <p>Loading...</p>;
     }
 
     return (
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full ">
 
-            <div className="w-[80%] hr-[2549px] top-[55px] gap-5 flex flex-col  bg-blue-500">
+            <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col  bg-blue-500 ">
 
                 <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
@@ -45,7 +51,6 @@ const ProductDetails = () => {
                                 </clipPath>
                             </defs>
                         </svg>
-
 
                         <div className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -66,21 +71,20 @@ const ProductDetails = () => {
 
                     </div>
 
-
-                    <button className="flex justify-end h-[30px] py-[5px] px-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white">Edit</button>
-
+                    <button onClick={handleClick} className="flex justify-end h-[30px] py-[5px] px-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white">Edit</button>
 
                 </div>
 
-                <div className="w-full h-[750px]  bg-slate-500 rounded-lg  gap-[20px] flex flex-row">
-                    <div className="h-full w-[80%] bg-red-700 flex flex-col  ">
+                <div
+                 className="w-full h-[750px] max-md:h-[1650px]  max-md:gap-[0px] bg-slate-500 rounded-lg  gap-[20px] flex flex-row max-sm:flex-col ">
+                    <div className="h-full w-[80%] max-sm:w-full bg-red-700 flex flex-col  ">
 
-                        <img src={product.picture} className="w-full h-[400px] bg-blue-200 rounded-tl-2xl" alt="Product" />
+                        <img src={product.picture} className="w-full h-[400px] max-sm:w-[396px] bg-blue-200 rounded-tl-2xl" alt="Product" />
 
 
-                        <div className="w-full h-[330px] bg-emerald-300 p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
+                        <div className="w-full h-[350px] bg-emerald-300 p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
-                            <p className="text-[14px] font-normal ">{product.description}</p>
+                            <p className="text-[14px] font-normal font-['Open_Sans'] ">{product.description}</p>
 
                         </div>
                     </div>
@@ -120,10 +124,10 @@ const ProductDetails = () => {
 
 
                 {/* Videoplayer section */}
-                <div className="w-full h-[484px] bg-gray-500 rounded  p-5 flex flex-col items-center justify-center gap-[20px]">
+                <div className="w-full h-[484px] border-[1px] border-[#E5E7EB] bg-white rounded  p-5 flex flex-col items-center justify-center gap-[20px]">
 
                     <div className=" self-stretch flex flex-col justify-center items-start gap-[10px] bg-white">
-                        <h1 className="text-base font-medium not-italic font-[Open Sans] ">Video</h1>
+                        <h1 className="text-xl text-[#374151] font-bold not-italic font-['Open_Sans'] ">Video</h1>
 
                     </div>
                     <Videoplayer productVideo={product.video} />

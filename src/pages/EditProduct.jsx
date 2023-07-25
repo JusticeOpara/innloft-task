@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
-import editIcon from "../assets/bildschirmfoto.png";
+import Location from "../assets/inno_location.svg";
 import axios from "axios"
 import TextEditor from './TextEditor';
 
@@ -12,6 +11,10 @@ function EditProduct() {
     businessModels: '',
     trl: '',
     attributes: [],
+    company: "",
+    user: "",
+    address: {},
+    street: {},
   });
 
   // Function to handle attribute changes
@@ -25,8 +28,8 @@ function EditProduct() {
   const saveProduct = async () => {
     try {
 
-      await axios.put(`https://api-test.innoloft.com/product/${items}/`, items);
-
+      const data = await axios.put(`https://api-test.innoloft.com/product/${items}/`, items);
+      console.log(data, "--Data product Data product")
     } catch (error) {
       console.error("Error updating product data:", error);
 
@@ -53,25 +56,22 @@ function EditProduct() {
     <>
       <div className="flex justify-center w-full">
 
-        <div className="w-[80%] hr-[989px] top-[55px] gap-5 flex flex-col  bg-blue-500">
+        <div className="w-[80%] hr-[989px] top-[55px] gap-5 flex flex-col  bg-white">
 
           <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
             <input
               type="text"
-              // value={items.type}
-              onChange={(e) => setItems({ ...items, categories: e.target.value })}
-              className="h-[24px] gap-2 w-full bg-red-200 rounded focus:outline-none border-[#D1D5DB] border-[1px] pl-1 placeholder-black"
+              onChange={(e) => setItems({ ...items, trl: e.target.value })}
+              className="h-[24px] gap-2 w-full rounded focus:outline-none border-[#D1D5DB] border-[1px] pl-1 placeholder-black"
               placeholder='Offers Title' />
 
-
-            <button className="flex  text-xs justify-end h-[30px] w-26 py-[5px] px-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white ">View Offer</button>
-
+            <button className="flex flex-row text-sm font-medium justify-center h-[30px] w-20 py-[5px] pdx-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white ">View Offer</button>
 
           </div>
 
-          <div className="w-full h-[750px]  bg-slate-500 rounded-lg  gap-[20px] flex flex-row">
-            <div className="h-full w-[75%] bg-red-700 flex flex-col  ">
+          <div className="w-full h-[750px] rounded-lg  gap-[20px] flex flex-row border-[1px] ">
+            <div className="h-full w-[75%] flex flex-col  ">
               <div className='w-full h-[400px]'>
                 <img src={items.picture} className="max-w-[100%] h-auto bg-blue-200 rounded-tl-2xl" alt="Product" />
 
@@ -81,50 +81,52 @@ function EditProduct() {
 
                 <TextEditor />
 
-                <div className="w-full cursor-pointer flex justify-end gap-[10px] h-[50px] items-center self-stretch py-0 px-[20px]">
+                <div className="w-full cursor-pointer  z-20 flex justify-end gap-[10px] h-[50px] items-center self-stretch py-0 px-[20px]">
 
                   <button className="flex items-center h-[30px] rounded-[6px] bg-white px-1 py-[7px] gap-1 ">Cancel</button>
                   <button onClick={saveProduct} className='flex cursor-pointer text-white h-[30px] items-center gap-1 bg-[#272E71] rounded-[6px] px-[20px] py-0'>Save</button>
 
                 </div>
-              </div>
 
+              </div>
 
             </div>
 
-            <div className="h-[600px] w-[42%] bg-teal-600 flex flex-col items-start self-stretch p-5  border-l-[RED]">
+            <div className="h-[600px] w-[42%] flex flex-col items-start self-stretch p-5  border-l-[RED]">
 
-              <div className="w-full h-[450px] flex flex-col justify-center items-start gap-2.5 bg-white">
+              <div className="w-full h-[230px] flex flex-col justify-center items-start gap-3 bg-white">
 
-                <p className="text-base font-semibold not-italic font-[OpenSans] ">Offer By </p>
+                <p className="text-lg font-semibold not-italic font-[OpenSans] text-[#374151] ">Offered By </p>
 
-                <img src="" className="w-[200px] h-[36.315px]" alt="Company Logo" />
+                <img src={items.company.logo} className="w-[200px] h-[36.315px]" alt="Company Logo" />
 
+                <div className=" flex flex-row w-full items-center">
 
-                <div className="bg-green-600 flex flex-row w-full items-center">
+                  <img src={items.user.profilePicture} className="rounded-[50%] w-20 bg-black" alt="User" />
 
-                  <img src={""} className="rounded-[50%] w-10 bg-black" alt="User" />
+                  <div className="flex flex-col text-base font-[OpenSans]">
 
-                  <div className="flex flex-col bg-slate-500">
-
-                    <p>{""} {""}</p>
-                    <p>{""}</p>
+                    <p>{items.user.firstName} {items.user.lastName}</p>
+                    <p>{items.company.name}</p>
                   </div>
 
                 </div>
 
-                <div className="text-sm h-[40px] w-full bg-orange-400">
-                  <p></p>
-                  <p></p>
+                <div className='flex flex-row justify-center  w-[100%] bg-rede-200'>
+                  <img src={Location} className='w-[10%]' alt="innoslocation" />
+                  <div className="text-base h-[50px] w-full font-[OpenSans]">
+
+                    <p>{items.company.address?.street},{items.company.address?.house},</p>
+
+                    <p>{items.company.address?.zipCode} {items.company.address?.city.name}, {items.company.address?.country.name}</p>
+
+                  </div>
                 </div>
+
 
               </div>
 
-
-
             </div>
-
-
 
           </div>
 
@@ -132,14 +134,16 @@ function EditProduct() {
 
           {/* Videoplayer section */}
           <div
-            className="w-full h-[122px] bg-gray-200 rounded-[6px] border-[1px] border-[#E5E7EB] px-[20px] py-[20px] flex flex-col items-start gap-[10px]">
+            className="w-full h-[122px]  rounded-[6px] border-[1px] border-[#E5E7EB] px-[20px] py-[20px] flex flex-col items-start gap-[10px]">
 
-            <div className=" self-stretch flex flex-col justify-center items-start gap-[20px] bg-red-300">
-              <h1 className="text-base font-medium not-italic font-[OpenSans] ">Video</h1>
-              {/* className="font-bold text-lg w-full rounded-md pl-2 border-[1px] focus:outline-none border-[#D1D5DB]" */}
+            <div className=" self-stretch flex flex-col justify-center items-start gap-[20px] ">
+              <h1 className="text-lg font-medium not-italic font-[OpenSans] ">Video</h1>
+              
               <input
-                className="w-full flex h-[38px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none border-[#D1D5DB]"
+                className="w-full flex h-[38px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none placeholder-black border-[#D1D5DB]"
                 placeholder='Add a youtube or vimeo link'
+                onChange={(e) => setItems({ ...items, video: e.target.value })}
+                type="text"
               />
             </div>
 
@@ -148,13 +152,14 @@ function EditProduct() {
 
 
           {/* Details Section */}
-          <div className='h-[108px] w-full flex flex-col py-[20px] px-[0px] items-start gap-3 self-stretch  bg-emerald-200 '>
-            <div className="flex flex-col items-start gap-20px self-stretch px-[20px] bg-slate-50">
+          <div className='h-[108px] w-full flex flex-col py-[20px] px-[0px] items-start gap-3 self-stretch  rounded-[6px] border-[1px] border-[#E5E7EB] mb-2  '>
+            <div className="flex flex-col items-start gap-20px self-stretch px-[20px] ">
               <h1 className="text-base font-medium not-italic font-[OpenSans] ">Offer details</h1>
 
               <input
+              type='text'
                 onChange={(e) => setItems({ ...items, trl: e.target.value })}
-                className="w-full flex h-[36px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none border-[#D1D5DB]" placeholder='This is up to you' />
+                className=" w-full flex h-[36px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none placeholder-black border-[#D1D5DB]" placeholder='This is up to you' />
             </div>
           </div>
 
@@ -167,3 +172,4 @@ function EditProduct() {
 }
 
 export default EditProduct
+

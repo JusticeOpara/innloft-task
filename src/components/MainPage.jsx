@@ -45,7 +45,7 @@ export default function MainPage() {
                 </div>
 
                 <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
-                    {/* <img src={homeIcon} className='w-8' alt="home" /> */}
+                
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" fill="none">
                         <g clip-path="url(#clip0_10498_184)">
@@ -60,7 +60,7 @@ export default function MainPage() {
 
                     <p className='text-[20px] font-medium '>Organizations</p>
 
-                    <span className='ml-[80px] '>
+                    <span className='ml-[80px]' >
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <g clip-path="url(#clip0_10498_182)">

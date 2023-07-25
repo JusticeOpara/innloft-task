@@ -44,6 +44,7 @@ const TextEditor = () => {
           style={{ height: "220px" }}
         >
         </ReactQuill>
+        
       </div>
     
   );
