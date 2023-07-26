@@ -151,7 +151,7 @@ function EditProduct() {
 
 
           {/* Details Section */}
-          <div className='h-[108px] w-full flex flex-col py-[20px] px-[0px] items-start gap-3 self-stretch  rounded-[6px] border-[1px] border-[#E5E7EB] mb-2  '>
+          <div className='h-[108px] w-full flex flex-col py-[20px] px-[0px] items-start gap-3 self-stretch  rounded-[6px] border-[1px] border-[#E5E7EB] mb-4  '>
             <div className="flex flex-col items-start gap-20px self-stretch px-[20px] ">
               <h1 className="text-base font-medium not-italic font-[OpenSans] ">Offer details</h1>
 

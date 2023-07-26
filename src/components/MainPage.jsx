@@ -13,30 +13,30 @@ export default function MainPage() {
 
         <div className='w-[full] lg:h-[91vh] max-sm:h-[100%] max-sm:gap-[10px] bfg-[#F9FAFB] bg-gray-500 flex justify-start'>
 
-            <div className="w-[340px] max-sm:h-[50%] max-sm:w-[200px] h-full p-4 bg-blue-200 rounded-xl flex flex-col gap-5">
+            <div className="w-[340px] max-sm:h-[50%] max-sm:w-[200px] h-full p-4 bg-white rounded-xl flex flex-col gap-5">
 
                 <div className='w-full bg-rerd-100 flex gap-4 items-center'>
 
-                    <img src={Pics} className="w-[100px] h-[100px] rounded-[50%]" alt='pic' />
+                    <img src={Pics} className="w-[100px] h-[100px] rounded-[50%] " alt='pic' />
 
-                    <div className="flex flex-col justify-center">
-                        <h1 className='text-[18px] font-bold text-[#374151]'>Sven Pietsch</h1>
-                        <h1 className='text-[18px] font-normal text-[#374151]'> Innoloft GmbH</h1>
+                    <div className="flex flex-col justify-center text-center ">
+                        <span className='text-[18px]  max-sm:text-[8px] font-bold text-[#374151]'>Svenb Pietsch</span>
+                        <h1 className='text-[18px]  max-sm:text-[7px] font-normal text-[#374151]'> Innoloft GmbH</h1>
                     </div>
 
                 </div>
 
-                <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
-                    <img src={homeIcon} className='w-8' alt="home" />
+                <div className='w-full h-[50px] gap-4 flex items-center text-[#374151] '>
+                    <img src={homeIcon} className='w-8 max-sm:w-5' alt="home" />
                     <p className='text-[20px] font-medium '>Home</p>
                 </div>
 
-                <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
-                    <img src={memberIcon} className="w-8" alt="member" />
+                <div className='w-full h-[50px] gap-4 flex items-center text-[#374151] '>
+                    <img src={memberIcon} className="w-8 max-sm:w-5" alt="member" />
                     <p className='text-[20px] font-medium '>Member</p>
                 </div>
 
-                <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151]'>
+                <div className='w-full h-[50px] gap-4 flex items-center text-[#374151]'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="white" d="m9.31 17l2.44-2.44L14.19 17l1.06-1.06l-2.44-2.44l2.44-2.44L14.19 10l-2.44 2.44L9.31 10l-1.06 1.06l2.44 2.44l-2.44 2.44L9.31 17zM19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
                     </svg>
@@ -45,7 +45,7 @@ export default function MainPage() {
 
                 </div>
 
-                <div className='w-full h-[50px] gap-4 bg-gray-200 flex items-center text-[#374151] '>
+                <div className='w-full h-[50px] gap-4 flex items-center text-[#374151] '>
                 
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" fill="none">
@@ -61,7 +61,7 @@ export default function MainPage() {
 
                     <p className='text-[20px] font-medium '>Organizations</p>
 
-                    <span className='ml-[80px]' >
+                    <span className='ml-[80px] max-sm:ml-[-9px]' >
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <g clip-path="url(#clip0_10498_182)">

@@ -143,7 +143,7 @@ const ProductDetails = () => {
 
 
                 {/* Details Section */}
-                <div className="w-full h-[230px] border-[1px] border-[#E5E7EB]   bg-white max-sm:h-[352px] max-sm:items-center max-sm:px-[10px] max-sm:py-[20px] py-[30px] px-[20px] self-stretch flex items-start flex-col   gap-2.5 rounded-lg">
+                <div className="w-full h-[230px] border-[1px] border-[#E5E7EB] mb-4   bg-white max-sm:h-[352px] max-sm:items-center max-sm:px-[10px] max-sm:py-[20px] py-[30px] px-[20px] self-stretch flex items-start flex-col   gap-2.5 rounded-lg">
 
                     <div className="w-full h-full gap-5 flex flex-col items-start self-stretch">
                         <div className="gap-5 w-full h-6 self-stretch flex items-center">
