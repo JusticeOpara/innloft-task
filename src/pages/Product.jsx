@@ -3,7 +3,7 @@ import axios from "axios";
 import Videoplayer from "./VideoPlayer";
 import Map from "./Map";
 import { Link, useNavigate } from "react-router-dom";
-
+import Location from "../assets/inno_location.svg";
 const ProductDetails = () => {
     const [product, setProduct] = useState(null);
     const navigate = useNavigate()
@@ -34,13 +34,13 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className="flex justify-center w-full max-sm:items-center">
+        <div className="flex justify-center w-full max-sm:items-center bg-[#F9FAFB]">
 
-            <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col  bg-blue-500 ">
+            <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-[#F9FAFB] ">
 
                 <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
-                    <div className="flex items-center w-full  h-[24px] gap-2 bg-gray-200 rounded">
+                    <div className="flex items-center w-full  h-[24px] gap-2 bg-white rounded">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="inno_home" clip-path="url(#clip0_9003_733)">
                                 <path id="Vector" d="M13 16H1.3335C1.20089 16 1.07371 15.9473 0.979943 15.8536C0.886175 15.7598 0.833496 15.6326 0.833496 15.5V7.16652C0.833472 7.10085 0.846399 7.03583 0.871538 6.97517C0.896676 6.91452 0.933533 6.85941 0.979996 6.81302L7.6465 0.146515C7.74026 0.0527798 7.86741 0.00012207 8 0.00012207C8.13258 0.00012207 8.25973 0.0527798 8.3535 0.146515L15.02 6.81302C15.0665 6.85941 15.1033 6.91452 15.1285 6.97517C15.1536 7.03583 15.1665 7.10085 15.1665 7.16652V13.8335C15.1665 13.9661 15.1138 14.0933 15.0201 14.1871C14.9263 14.2808 14.7991 14.3335 14.6665 14.3335C14.5339 14.3335 14.4067 14.2808 14.3129 14.1871C14.2192 14.0933 14.1665 13.9661 14.1665 13.8335V7.37352L8 1.20702L1.8335 7.37352V15H13C13.1326 15 13.2598 15.0527 13.3535 15.1465C13.4473 15.2402 13.5 15.3674 13.5 15.5C13.5 15.6326 13.4473 15.7598 13.3535 15.8536C13.2598 15.9473 13.1326 16 13 16Z" fill="#374151" />
@@ -75,39 +75,45 @@ const ProductDetails = () => {
 
                 </div>
 
-                <div
-                    className="w-full h-[750px] max-sm:h-[1300px]    bg-slate-500 rounded-lg  gap-[20px] flex flex-row max-sm:flex-col max-sm:items-center ">
-                    <div className="h-full w-[80%] max-sm:w-full max-sm:h-[600px] bg-red-700 flex flex-col max-sm:items-center  ">
+                <div className="w-full border-[1px] border-[#E5E7EB] bg-white rounded h-[750px] max-sm:h-[1100px] rounded-lg  gap-[20px] max-sm:gap-[0px] flex flex-row max-sm:flex-col max-sm:items-center ">
+                    <div className="h-full w-[80%] max-sm:w-full max-sm:h-[500px] flex flex-col max-sm:items-center  ">
 
-                        <img src={product.picture} className="w-full h-[400px] max-slm:h-[180px] max-sm:rounded-none max-sm:w-[396px] bg-blue-200 rounded-tl-2xl" alt="Product" />
+                        <img src={product.picture} className="w-full h-[400px] max-sm:h-[200px] max-sm:rounded-t-lg rounded-tl-2xl" alt="Product" />
 
 
-                        <div className="w-full h-[350px] max-sm:h-[414px] bg-emerald-300 p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
+                        <div className="w-full h-[350px] max-sm:h-[304px] p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
                             <p className="text-[14px] max-sm:text-[10px] font-normal font-['Open_Sans'] ">{product.description}</p>
 
                         </div>
                     </div>
-                    <div className="h-[600px] w-[42%] max-sm:w-full bg-teal-600 flex flex-col items-start self-stretch p-5  border-l-[RED]">
+                    <div className="h-[600px] w-[42%] max-sm:w-full flex flex-col items-start self-stretch p-5  ">
 
-                        <div className="w-full h-[450px] flex flex-col justify-center items-start gap-2.5 bg-white">
-                            <p className="text-base font-semibold not-italic font-[Open Sans] ">Offer By </p>
-                            <img src={product.company.logo} className="w-[200px] h-[36.315px]" alt="Company Logo" />
+                        <div className="w-full h-[400px] flex flex-col justify-center items-start gap-4 bg-white">
+                            <p className="text-xl font-bold not-italic font-[Open-Sans] ">Offer By </p>
+                            <img src={product.company.logo} className="w-[250px] h-[36.315px]" alt="Company Logo" />
 
-                            <div className="bg-green-400 flex flex-row w-full items-center">
+                            <div className="flex flex-row w-full items-center">
 
                                 <img src={product.user.profilePicture} className="rounded-[50%] w-10 bg-black" alt="User" />
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col text-base font-[OpenSans]">
 
                                     <p>{product.user.firstName} {product.user.lastName}</p>
                                     <p>{product.company.name}</p>
                                 </div>
 
                             </div>
-                            <div className="text-sm h-[40px] w-full bg-orange-400">
-                                <p>{product.company.address.street},{product.company.address.house},</p>
-                                <p>{product.company.address.zipCode} {product.company.address.city.name}, {product.company.address.country.name}</p>
+                           
+                            <div className='flex flex-row justify-center  w-[100%] bg-rede-200'>
+                                <img src={Location} className='w-[10%]' alt="innoslocation" />
+                                <div className="text-base font-semibold h-[50px] w-full font-[OpenSans]">
+
+                                    <p>{product.company.address?.street},{product.company.address?.house},</p>
+
+                                    <p>{product.company.address?.zipCode} {product.company.address?.city.name}, {product.company.address?.country.name}</p>
+
+                                </div>
                             </div>
 
 
@@ -124,7 +130,7 @@ const ProductDetails = () => {
 
 
                 {/* Videoplayer section */}
-                <div className="w-full h-[484px] border-[1px] border-[#E5E7EB] bg-white rounded  p-5 flex flex-col items-center justify-center gap-[20px]">
+                <div className="w-full h-[484px] max-sm:h-[304px] border-[1px] border-[#E5E7EB] bg-white rounded  p-5 flex flex-col items-center justify-center gap-[20px]">
 
                     <div className=" self-stretch flex flex-col justify-center items-start gap-[10px] bg-white">
                         <h1 className="text-xl text-[#374151] font-bold not-italic font-['Open_Sans'] ">Video</h1>
@@ -137,16 +143,16 @@ const ProductDetails = () => {
 
 
                 {/* Details Section */}
-                <div className="w-full h-[230px] max-sm:h-[402px] max-sm:items-center  bg-yellow-200 self-stretch flex items-start flex-col py-[30px] px-[20px]  gap-2.5 rounded-lg">
+                <div className="w-full h-[230px] border-[1px] border-[#E5E7EB]   bg-white max-sm:h-[352px] max-sm:items-center max-sm:px-[10px] max-sm:py-[20px] py-[30px] px-[20px] self-stretch flex items-start flex-col   gap-2.5 rounded-lg">
 
-                    <div className="w-full h-full bg-white gap-5 flex flex-col items-start self-stretch">
-                        <div className="gap-5 w-full h-6 bg-red-200 self-stretch flex items-center">
+                    <div className="w-full h-full gap-5 flex flex-col items-start self-stretch">
+                        <div className="gap-5 w-full h-6 self-stretch flex items-center">
                             <h1 className="text-base font-medium not-italic font-[Open Sans] ">Offer</h1>
                         </div>
 
-                        <div className="w-full h-full flex flex-col justify-center items-start gap-[20px] bg-lime-400 max-sm:gap-[0px]">
-                            <div className=" flex max-sm:flex-col items-start gap-10 self-stretch">
-                                <div className="w-[525px] h-[58px] max-sm:w-full bg-pink-300 flex items-start gap-[5px] flex-1" >
+                        <div className="w-full h-full flex flex-col justify-center items-start gap-[20px] max-sm:gap-[10px]">
+                            <div className=" flex max-sm:flex-col max-sm:gap-3 items-start gap-10 self-stretch">
+                                <div className="w-[525px] h-[58px] max-sm:h-[70px] max-sm:w-full  flex items-start gap-[5px] flex-1" >
                                     {/* <img src="" alt="" /> */}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clip-path="url(#clip0_1_1112)">
@@ -167,10 +173,10 @@ const ProductDetails = () => {
                                             Techonology
                                         </h1>
 
-                                        <div className="flex flex-row w-full h-[24px] bg-red-500 items-center gap-[5px] ">
+                                        <div className="flex flex-row w-full h-[24px] items-center gap-[5px]  ">
                                             {product.categories.map((category) => (
 
-                                                <p key={category.id} className="flex h-[24px] text-base items-center gap-[10px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
+                                                <p key={category.id} className="flex h-[24px] text-base items-center gap-[10px] max-sm:text-[11px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
                                                     {category.name}</p>
 
 
@@ -184,7 +190,7 @@ const ProductDetails = () => {
 
 
 
-                                <div className="w-[525px] h-[58px] max-sm:w-full bg-white flex items-start gap-[5px] flex-1">
+                                <div className="w-[525px] h-[58px] max-sm:h-[70px] max-sm:w-full bg-white flex items-start gap-[5px] flex-1">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M19.1837 24H5.39356C5.10982 23.9976 4.83863 23.8828 4.63951 23.6806C4.4404 23.4785 4.32964 23.2056 4.33156 22.9218V20.2983C4.32653 19.5159 4.62629 18.7623 5.16732 18.1972C5.70836 17.632 6.44816 17.2997 7.23001 17.2706C7.31356 14.2589 7.92586 12.2594 9.05236 11.3204C9.45226 10.9922 9.84631 10.6304 10.1685 10.3082C9.84184 10.2388 9.52142 10.1428 9.21046 10.0211C9.09481 9.97846 8.96881 9.93316 8.87356 9.90376C8.81941 9.94771 8.75206 10.0088 8.69776 10.0577C8.39925 10.3686 8.04171 10.6168 7.64606 10.7879C7.25041 10.9589 6.82461 11.0493 6.39361 11.0537C4.52296 11.0537 3.78181 9.15826 3.75361 7.96366C3.73456 7.21651 4.51096 6.52816 6.16336 5.24341C6.53386 4.95346 6.86941 4.69561 7.06711 4.50961C7.23826 4.32952 7.37307 4.11811 7.46416 3.88696C7.57285 3.55223 7.77626 3.25619 8.04976 3.03469C8.32325 2.81319 8.6551 2.67573 9.00511 2.63896C9.10835 2.63469 9.21036 2.61481 9.30766 2.58001H9.30616C9.27541 2.58001 9.30616 2.34571 9.10261 1.55911C9.02017 1.33837 9.00512 1.09813 9.05935 0.868829C9.11359 0.639526 9.23467 0.431483 9.40726 0.271062C10.095 -0.317838 11.1987 0.152412 12.7266 0.798312C13.2627 1.02541 13.815 1.26121 14.31 1.42231C16.623 2.18266 19.2 5.65726 19.2 9.42916C19.1651 11.0284 18.8293 12.6067 18.21 14.0816C17.7918 15.1029 17.511 16.1753 17.3751 17.2706C18.152 17.3071 18.8846 17.6426 19.4197 18.2069C19.9549 18.7712 20.251 19.5206 20.2463 20.2983V22.9218C20.2482 23.2057 20.1373 23.4786 19.9381 23.6808C19.7388 23.883 19.4675 23.9978 19.1837 24ZM5.83156 22.5H18.7457V20.2983C18.7514 19.8991 18.5985 19.5139 18.3206 19.2272C18.0427 18.9405 17.6624 18.7757 17.2632 18.7691H15.8408V18.0191C15.8804 16.4895 16.2053 14.9807 16.7988 13.5704C17.3568 12.2589 17.6625 10.8539 17.7 9.42916C17.709 8.08651 17.3554 6.76633 16.6765 5.60794C15.9976 4.44954 15.0186 3.49589 13.8428 2.84761C13.3125 2.67481 12.7178 2.42431 12.1421 2.17966C11.6921 1.98931 11.0859 1.73296 10.6538 1.59466C10.7601 1.90145 10.8015 2.22701 10.7753 2.55064C10.749 2.87428 10.6558 3.18893 10.5015 3.47461C10.3386 3.6764 10.1333 3.8399 9.90013 3.95356C9.667 4.06723 9.41174 4.12826 9.15241 4.13236C9.01321 4.14556 9.00151 4.14736 8.81986 4.52926C8.65061 4.9319 8.40371 5.29725 8.09326 5.60446C7.87066 5.81251 7.50001 6.10261 7.08541 6.42631C6.42762 6.89818 5.8169 7.4324 5.26171 8.02156C5.29831 8.37016 5.48881 9.55366 6.39406 9.55366C6.64109 9.54803 6.88424 9.49094 7.10796 9.38603C7.33168 9.28111 7.53106 9.13069 7.69336 8.94436C7.84404 8.76456 8.0333 8.62102 8.24707 8.52439C8.46084 8.42776 8.69363 8.38054 8.92816 8.38621C9.202 8.4306 9.46988 8.50609 9.72661 8.61121C10.1589 8.82764 10.6477 8.90443 11.1255 8.83096C11.3343 8.74305 11.568 8.73459 11.7825 8.80719C11.9971 8.87979 12.1776 9.02841 12.2901 9.22501C12.4409 9.51361 12.794 10.1918 10.0094 12.4755C9.20656 13.145 8.73781 15.1005 8.72026 17.8529L8.72461 18.0179V18.7679H7.31551C6.91605 18.7742 6.53543 18.9388 6.25721 19.2255C5.97899 19.5122 5.8259 19.8976 5.83156 20.2971V22.5Z" fill="#9CA3AF" />
@@ -194,12 +200,10 @@ const ProductDetails = () => {
                                             Business Models
                                         </h1>
 
-                                        <div className="flex flex-row justify-center w-full h-[24px] bg-red-500 items-center gap-[5px] ">
+                                        <div className="flex flex-row justify-center w-full h-[24px] items-center gap-[5px] ">
                                             {product.businessModels.map((model) => (
 
-                                                <p key={model.id}
-                                                    className="flex flex-row h-[24px] px-[5px] text-sm items-center gap-[10px] 
-                                                bg-[#E5E7EB] rounded-[20px] text-center">
+                                                <p key={model.id} className="flex flex-row h-[24px] px-[5px] text-sm max-sm:text-[11px] max-sm:px-[0px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px] text-center">
                                                     {model.name}</p>
 
 
@@ -213,9 +217,9 @@ const ProductDetails = () => {
 
                             </div>
 
-                            <div className=" flex max-sm:flex-col items-start gap-10 self-stretch">
+                            <div className=" flex max-sm:flex-col max-sm:gap-3 items-start gap-10 self-stretch">
 
-                                <div className="w-[525px] h-[58px] max-sm:w-full bg-green-200 flex items-start gap-[5px] flex-1">
+                                <div className="w-[525px] h-[58px] max-sm:h-[80px] max-sm:w-full  flex items-start gap-[5px] flex-1">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clipPath="url(#clip0_1_1135)">
@@ -234,9 +238,9 @@ const ProductDetails = () => {
                                         <h1 className="text-base font-normal text-[#6b7280]">
                                             TRL
                                         </h1>
-                                        <div className="flex flex-row w-full h-[24px] bg-red-500 items-center gap-[5px] ">
+                                        <div className="flex flex-row w-full h-[24px]  items-center gap-[5px] ">
 
-                                            <p key={product.trl.id} className="flex text-sm h-[29px] px-[18px]  items-center gap-[10px] bg-[#E5E7EB] rounded-[20px]">
+                                            <p key={product.trl.id} className="flex text-sm h-[29px] px-[18px] max-sm:text-[11px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px]">
                                                 {product.trl.name}</p>
 
                                         </div>
@@ -244,7 +248,7 @@ const ProductDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[525px] h-[58px] bg-slate-600 max-sm:w-full flex items-start gap-[5px] flex-1">
+                                <div className="w-[525px] h-[58px] max-sm:h-[80px] max-sm:w-full flex items-start gap-[5px] flex-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clipPath="url(#clip0_1_1147)">
                                             <path d="M15.1485 5.6499L16.2735 3.3984C16.3175 3.3103 16.3438 3.21439 16.3508 3.11614C16.3578 3.01789 16.3453 2.91922 16.3142 2.82578C16.283 2.73234 16.2338 2.64595 16.1692 2.57154C16.1047 2.49714 16.0261 2.43617 15.938 2.39213C15.8499 2.34808 15.754 2.32182 15.6558 2.31484C15.5575 2.30786 15.4588 2.3203 15.3654 2.35146C15.272 2.38261 15.1856 2.43186 15.1112 2.4964C15.0368 2.56094 14.9758 2.6395 14.9317 2.7276L13.6999 5.19285H10.3L8.4543 1.5H14.1636C14.3625 1.5 14.5533 1.42098 14.6939 1.28033C14.8346 1.13968 14.9136 0.948912 14.9136 0.75C14.9136 0.551088 14.8346 0.360322 14.6939 0.21967C14.5533 0.0790176 14.3625 0 14.1636 0L7.24065 0C7.11282 2.99082e-05 6.98712 0.0327302 6.87549 0.0949964C6.76385 0.157263 6.66998 0.247028 6.60279 0.355771C6.5356 0.464515 6.49732 0.588626 6.49158 0.716324C6.48584 0.844022 6.51283 0.971067 6.57 1.0854L8.8515 5.65005C7.01718 6.86396 5.49487 8.4932 4.40809 10.4056C3.3213 12.318 2.70065 14.4596 2.5965 16.6567C2.5965 19.6084 5.1 24 12 24C18.9 24 21.4035 19.6084 21.4035 16.6567C21.2993 14.4596 20.6787 12.3179 19.5919 10.4055C18.5051 8.49312 16.9828 6.86385 15.1485 5.6499ZM12 22.5C6.20145 22.5 4.0965 19.005 4.0965 16.6567C4.0965 11.1694 9.0594 6.69285 10.2693 6.69285H13.7307C14.9406 6.69285 19.9035 11.1694 19.9035 16.6567C19.9035 19.005 17.7985 22.5 12 22.5Z" fill="#9CA3AF" />
@@ -262,8 +266,8 @@ const ProductDetails = () => {
                                         <h1 className="text-base font-normal text-[#6b7280]">
                                             Costs
                                         </h1>
-                                        <div className="flex flex-row w-full h-[24px] bg-red-500 items-center gap-[5px] ">
-                                            <p className="flex h-[24px] items-center gap-[5px] rounded-[20px] bg-[#E5E7EB] px-[14px] py-[5px]"> {product.investmentEffort}</p>
+                                        <div className="flex flex-row w-full h-[24px]  items-center gap-[5px] ">
+                                            <p className="flex h-[24px] items-center gap-[5px] rounded-[20px] max-sm:text-[11px] bg-[#E5E7EB] px-[14px] py-[5px]"> {product.investmentEffort}</p>
 
                                         </div>
 

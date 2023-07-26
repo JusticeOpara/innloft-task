@@ -14,13 +14,12 @@ function App() {
   const IsLoggedIn = useSelector(state => state.auth.IsLoggedIn)
   console.log(IsLoggedIn, "--isLoggging")
   return (
-    <div className="bg-gray-200 w-[100%] ">
+    <div className=" w-[100%] ">
       <Header />
       
     
       <Routes>
-        {/* <Route path="" element={!IsLoggedIn && <MainPage/>}/>
-        <Route path='/product' element={IsLoggedIn && <Products />} /> */}
+       
          {!IsLoggedIn && <Route path='*' element={<MainPage />} />}
 
         {IsLoggedIn && <Route path='/product' element={<Products />} />}

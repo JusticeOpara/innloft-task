@@ -11,8 +11,9 @@ export default function MainPage() {
 
     return (
 
-        <div className='w-[full] lg:h-[91vh] bg-slate-500 flex justify-start '>
-            <div className="w-[340px] h-full  p-4 bg-white rounded-xl flex flex-col gap-5">
+        <div className='w-[full] lg:h-[91vh] max-sm:h-[100%] max-sm:gap-[10px] bfg-[#F9FAFB] bg-gray-500 flex justify-start'>
+
+            <div className="w-[340px] max-sm:h-[50%] max-sm:w-[200px] h-full p-4 bg-blue-200 rounded-xl flex flex-col gap-5">
 
                 <div className='w-full bg-rerd-100 flex gap-4 items-center'>
 

@@ -54,9 +54,9 @@ function EditProduct() {
   return (
 
     <>
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center w-full max-sm:items-center">
 
-        <div className="w-[80%] hr-[989px] top-[55px] gap-5 flex flex-col  bg-white">
+        <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-white">
 
           <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
@@ -70,14 +70,14 @@ function EditProduct() {
 
           </div>
 
-          <div className="w-full h-[750px] rounded-lg  gap-[20px] flex flex-row border-[1px] ">
-            <div className="h-full w-[75%] flex flex-col  ">
-              <div className='w-full h-[400px]'>
-                <img src={items.picture} className="max-w-[100%] h-auto bg-blue-200 rounded-tl-2xl" alt="Product" />
+          <div className="w-full h-[750px] max-sm:h-[830px] rounded-lg  gap-[20px] max-sm:gap-[0px] flex flex-row max-sm:flex-col max-sm:items-center border-[1px] ">
+            <div className="h-full max-sm:w-full max-sm:h-[530px] flex flex-col max-sm:items-center w-[75%] ">
+              <div className='w-full h-[400px] max-sm:h-[200px] '>
+                <img src={items.picture} className="max-w-[100%] max-sm:rounded-t-lg h-auto bg-blue-200 rounded-tl-2xl" alt="Product" />
 
               </div>
 
-              <div className="w-full h-[350px]  bg-white p-5 gap-2.5 flex flex-col items-start self-stretch  text-[#6B7280]">
+              <div className="w-full h-[350px] max-sm:h-[464px] bg-white p-5 gap-2.5 flex flex-col items-start self-stretch  text-[#6B7280]">
 
                 <TextEditor />
 
@@ -92,9 +92,9 @@ function EditProduct() {
 
             </div>
 
-            <div className="h-[600px] w-[42%] flex flex-col items-start self-stretch p-5  border-l-[RED]">
+            <div className="h-[600px] w-[42%] max-sm:h-[300px]  max-sm:w-full flex flex-col items-start self-stretch p-5">
 
-              <div className="w-full h-[230px] flex flex-col justify-center items-start gap-3 bg-white">
+              <div className="w-full h-[400px] bg-white flex flex-col justify-center items-start gap-3 ">
 
                 <p className="text-lg font-semibold not-italic font-[OpenSans] text-[#374151] ">Offered By </p>
 
@@ -112,7 +112,7 @@ function EditProduct() {
 
                 </div>
 
-                <div className='flex flex-row justify-center  w-[100%] bg-rede-200'>
+                <div className='flex flex-row justify-center w-[100%]'>
                   <img src={Location} className='w-[10%]' alt="innoslocation" />
                   <div className="text-base h-[50px] w-full font-[OpenSans]">
 
@@ -133,8 +133,7 @@ function EditProduct() {
 
 
           {/* Videoplayer section */}
-          <div
-            className="w-full h-[122px]  rounded-[6px] border-[1px] border-[#E5E7EB] px-[20px] py-[20px] flex flex-col items-start gap-[10px]">
+          <div className="w-full h-[122px]  rounded-[6px] border-[1px] border-[#E5E7EB] px-[20px] py-[20px] flex flex-col items-start gap-[10px]">
 
             <div className=" self-stretch flex flex-col justify-center items-start gap-[20px] ">
               <h1 className="text-lg font-medium not-italic font-[OpenSans] ">Video</h1>
