@@ -75,7 +75,7 @@ const ProductDetails = () => {
 
                 </div>
 
-                <div className="w-full border-[1px] border-[#E5E7EB] bg-white rounded h-[750px] max-sm:h-[1100px] rounded-lg  gap-[20px] max-sm:gap-[0px] flex flex-row max-sm:flex-col max-sm:items-center ">
+                <div className="w-full border-[1px] border-[#E5E7EB] bg-white  h-[750px] max-sm:h-[1100px] rounded-lg  gap-[20px] max-sm:gap-[0px] flex flex-row max-sm:flex-col max-sm:items-center ">
                     <div className="h-full w-[80%] max-sm:w-full max-sm:h-[500px] flex flex-col max-sm:items-center  ">
 
                         <img src={product.picture} className="w-full h-[400px] max-sm:h-[200px] max-sm:rounded-t-lg rounded-tl-2xl" alt="Product" />
@@ -83,7 +83,7 @@ const ProductDetails = () => {
 
                         <div className="w-full h-[350px] max-sm:h-[304px] p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
-                            <p className="max-xl:text-[13px] text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-normal font-['Open_Sans'] ">{product.description}</p>
+                            <p className="max-xl:text-[13px] text-[14px] max-lg:text-[12px] max-md:text-[12px] max-sm:text-[11px]  font-normal font-['Open_Sans'] ">{product.description}</p>
 
                         </div>
                     </div>
