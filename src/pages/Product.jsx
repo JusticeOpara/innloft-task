@@ -83,7 +83,7 @@ const ProductDetails = () => {
 
                         <div className="w-full h-[350px] max-sm:h-[304px] p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
-                            <p className="text-[14px] max-sm:text-[10px] font-normal font-['Open_Sans'] ">{product.description}</p>
+                            <p className="max-xl:text-[13px] text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-normal font-['Open_Sans'] ">{product.description}</p>
 
                         </div>
                     </div>

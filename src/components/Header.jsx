@@ -41,7 +41,7 @@ export default function () {
 
             <img src={searchIcon} className="absolute top-5 right-[450px] max-md:hidden" alt="search" />
 
-            <div className="flex items-center justify-between flex-shrink-0 w-[184px] h-[25px]  top-[14px] right-[100px] absolute max-md:hidden">
+            <div className="flex items-center justify-between flex-shrink-0 w-[184px] h-[25px]  top-[14px] right-[100px] absolute max-md:hidden ">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <g clipPath="url(#clip0_10498_416)">
@@ -162,7 +162,7 @@ export default function () {
 
 
             </div>
-            {/* {configuration.hasUserSection && <UserInfoSection />} */}
+            
         </header>
     )
 }
