@@ -4,7 +4,9 @@ import Videoplayer from "./VideoPlayer";
 import Map from "./Map";
 import { Link, useNavigate } from "react-router-dom";
 import Location from "../assets/inno_location.svg";
-const ProductDetails = () => {
+
+
+const Product = () => {
     const [product, setProduct] = useState(null);
     const navigate = useNavigate()
 
@@ -26,19 +28,18 @@ const ProductDetails = () => {
 
     }, []);
 
-    // console.log(product
-    //     , "--ProductData")
 
     if (!product) {
         return <p>Loading...</p>;
     }
-
+  
+  
     return (
-        <div className="flex justify-center w-full max-sm:items-center bg-[#F9FAFB]">
+        <div className=" w-[75%] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
 
-            <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-[#F9FAFB] ">
+            <div className="w-[100%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col brg-[#F9FAFB]">
 
-                <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
+                <div className="w-full h-[30px] bg-white gap-5 mt-4 flex flex-row justify-between items-center">
 
                     <div className="flex items-center w-full  h-[24px] gap-2 bg-white rounded">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,8 +123,6 @@ const ProductDetails = () => {
                         <Map />
 
                     </div>
-
-
 
                 </div>
 
@@ -293,4 +292,4 @@ const ProductDetails = () => {
     );
 };
 
-export default ProductDetails;
+export default Product;

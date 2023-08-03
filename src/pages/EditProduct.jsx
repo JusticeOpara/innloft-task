@@ -54,9 +54,9 @@ function EditProduct() {
   return (
 
     <>
-      <div className="flex justify-center w-full max-sm:items-center">
+      <div className="flex justify-end w-full h-[1160px] px-2  max-sm:items-center">
 
-        <div className="w-[80%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-white">
+        <div className="w-[100%] max-sm:w-[100%] top-[55px]  gap-5 flex flex-col bg-white">
 
           <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
