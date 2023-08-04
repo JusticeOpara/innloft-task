@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import getAppConfiguration from "../config";
 import Profile from "../assets/profile.png";
 import searchIcon from "../assets/inno_search.svg";
+import { Link } from "react-router-dom";
 
 export default function () {
     const [isOpen, setIsOpen] = useState(false)
@@ -23,25 +24,25 @@ export default function () {
     return (
 
         <header style={headerStyle} >
+            <Link to="/product">
+                <img src={configuration.logo} style={{
+                    width: "140px",
+                    position: "absolute",
+                    height: "26.285715103149414px",
+                    top: "14px",
+                    left: '30px',
+                    padding: '0.5142857432365417px 0.399993896484375px 0.4000018239021301px 0px',
+                    background: "white",
+                }} alt="Logo" />
+            </Link>
 
-            <img src={configuration.logo} style={{
-                width: "140px",
-                position: "absolute",
-                height: "26.285715103149414px",
-                top: "14px",
-                left: '100px',
-                padding: '0.5142857432365417px 0.399993896484375px 0.4000018239021301px 0px',
-                background: "white",
-            }} alt="Logo" />
 
             <input type="text" placeholder="Enter interests, keyword,company name, etc"
-                className=" bg-white absolute w-[500px]  h-[27px] 
-                top-[14px] left-[320px] rounded pl-2 focus:outline-none placeholder-black 
-                border-[#D1D5DB] max-md:hidden" />
+                className=" bg-white absolute w-[500px]  h-[27px] top-[14px] left-[320px]  rounded pl-2 focus:outline-none placeholder-black border-[#D1D5DB] max-md:hidden" />
 
-            <img src={searchIcon} className="absolute top-5 right-[450px] max-md:hidden" alt="search" />
+            <img src={searchIcon} className="absolute top-5 right-[470px] max-md:hidden " alt="search" />
 
-            <div className="flex items-center justify-between flex-shrink-0 w-[184px] h-[25px]  top-[14px] right-[100px] absolute max-md:hidden ">
+            <div className=" bg-grefen-400 flex items-center justify-between flex-shrink-0 w-[150px] h-[25px] top-[14px] right-[30px] absolute max-md:hidden ">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <g clipPath="url(#clip0_10498_416)">
@@ -162,7 +163,7 @@ export default function () {
 
 
             </div>
-            
+
         </header>
     )
 }
