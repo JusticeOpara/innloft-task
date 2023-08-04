@@ -3,6 +3,7 @@ import Location from "../assets/inno_location.svg";
 import axios from "axios"
 import TextEditor from './TextEditor';
 import CardLabel from "../assets/CardLabel.svg"
+import { Link } from 'react-router-dom';
 
 function EditProduct() {
 
@@ -50,16 +51,14 @@ function EditProduct() {
     PushProductData();
   }, []);
   console.log(items, "--PRODUCT-DATA-ITEMS")
-  // <div className=" w-[75%] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
-
-  // <div className="w-[100%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col brg-[#F9FAFB]">
+  
 
   return (
 
     <>
-      <div className="w-[78%] h-[1160px] px-2  max-sm:items-center">
+      <div className="w-[78%] max-lg:w-[100%] max-sm:h-[1240px] h-[1160px] bg-slate-950  px-2  max-sm:items-center">
 
-        <div className="we-[100%] max-sm:w-[100%] top-[55px]  gap-5 flex flex-col bg-white">
+        <div className="wr-[100%] max-lg:w-[100%] top-[55px]  gap-5 flex flex-col bg-white">
 
           <div className="w-full h-[30px] bg-white  gap-5  mt-4 flex flex-row justify-between items-center">
 
@@ -69,7 +68,10 @@ function EditProduct() {
               className="h-[24px] gap-2 w-full rounded focus:outline-none border-[#D1D5DB] border-[1px] pl-1 placeholder-black"
               placeholder='Offers Title' />
 
-            <button className="flex flex-row text-sm font-medium justify-center h-[30px] w-20 py-[5px] pdx-[10px] items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white ">View Offer</button>
+            <Link to="/product" >
+              <button className="flex flex-row text-sm font-medium justify-center h-[30px] w-20 py-[5px]  items-center rounded-md gap-[5px] bg-[#272E71] border-[1px] border-[#272E71] text-white ">View Offer</button>
+            </Link>
+
 
           </div>
 
@@ -77,9 +79,9 @@ function EditProduct() {
             <div className="h-full max-sm:w-full max-sm:h-[530px] flex flex-col max-sm:items-center w-[75%] ">
               <div className='w-full h-[400px] max-sm:h-[200px] '>
                 <img src={items.picture} className="max-w-[100%] max-sm:rounded-t-lg h-auto bg-blue-200 rounded-tl-2xl" alt="Product" />
-                
+
               </div>
-              <img src={CardLabel} className="w-32  absolute flex  pr-0 items-center gap-2" alt="cardlabel" />
+              <img src={CardLabel} className="w-32 absolute flex pr-0 max-sm:left-[10px] gap-2" alt="cardlabel" />
 
               <div className="w-full h-[350px] max-sm:h-[464px] bg-white p-5 gap-2.5 flex flex-col items-start self-stretch  text-[#6B7280]">
 
@@ -141,7 +143,7 @@ function EditProduct() {
 
             <div className=" self-stretch flex flex-col justify-center items-start gap-[20px] ">
               <h1 className="text-lg font-medium not-italic font-[OpenSans] ">Video</h1>
-              
+
               <input
                 className="w-full flex h-[38px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none placeholder-black border-[#D1D5DB]"
                 placeholder='Add a youtube or vimeo link'
@@ -160,7 +162,7 @@ function EditProduct() {
               <h1 className="text-base font-medium not-italic font-[OpenSans] ">Offer details</h1>
 
               <input
-              type='text'
+                type='text'
                 onChange={(e) => setItems({ ...items, trl: e.target.value })}
                 className=" w-full flex h-[36px]  pl-2 gap-[4px] self-stretch items-center rounded-[6px] border-[1px] focus:outline-none placeholder-black border-[#D1D5DB]" placeholder='This is up to you' />
             </div>

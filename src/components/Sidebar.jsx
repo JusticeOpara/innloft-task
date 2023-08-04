@@ -14,7 +14,7 @@ export default function Sidebar() {
     return (
         <>
 
-            <div className='bg-white w-[20rem]  sticky block  px-1.5 top-0 overflow-hidden '>
+            <div className='bg-white w-[20rem] sticky block  px-1.5 top-0 overflow-hidden max-sm:hidden max-lg:hidden '>
 
                 <div className='flex flex-col h-[calc(100vh-7em)] w-full justify-between items-center '>
                     <div className="max-h[140px] relative mt-2 overflow-y-auto   ">
@@ -34,7 +34,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                        >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -49,7 +49,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                        >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -64,7 +64,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                        >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -79,7 +79,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                    >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                        >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function Sidebar() {
                                 </li>
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                    >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function Sidebar() {
 
                                 <li className='py-0.5 w-[250px] '>
                                     <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
+                                        >
 
                                         <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
                                             <div class="flex items-center gap-2">

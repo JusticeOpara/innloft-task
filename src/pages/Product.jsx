@@ -36,9 +36,9 @@ const Product = () => {
 
 
     return (
-        <div className=" w-[76%] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
+        <div className=" w-[76%] max-lg:w-[100%] max-sm:h-[1930px] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
 
-            <div className="w-[100%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-[#F9FAFB]">
+            <div className="w-[100%] max-lg:w-[100%] top-[55px] gap-5 flex flex-col bg-[#F9FAFB]">
 
                 <div className="w-full h-[30px] bg-white gap-5 mt-4 flex flex-row justify-between items-center">
 
@@ -81,7 +81,7 @@ const Product = () => {
                     <div className="h-full w-[80%] max-sm:w-full max-sm:h-[500px] flex flex-col max-sm:items-center  ">
 
                         <img src={product.picture} className="w-full h-[400px] max-sm:h-[200px] max-sm:rounded-t-lg rounded-tl-2xl" alt="Product" />
-                        <img src={CardLabel} className="w-32  absolute flex  pr-0 items-center gap-2" alt="cardlabel" />
+                        <img src={CardLabel} className="w-32  absolute  max-sm:left-0 pr-0  gap-2 " alt="cardlabel" />
                       
                         <div className="w-full h-[350px] max-sm:h-[304px] p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
@@ -176,7 +176,7 @@ const Product = () => {
                                         <div className="flex flex-row w-full h-[24px] items-center gap-[5px]  ">
                                             {product.categories.map((category) => (
 
-                                                <p key={category.id} className="flex h-[24px] text-sm items-center gap-[10px] max-sm:text-[11px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
+                                                <p key={category.id} className="flex h-[24px] text-xs items-center gap-[10px] max-sm:text-[11px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
                                                     {category.name}</p>
 
 
