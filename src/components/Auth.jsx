@@ -16,13 +16,16 @@ export default function Auth() {
     const handleClick = () => {
         navigate('/product');
     }
+    // display: inline-block;
+    // margin-left: auto;
+    // margin-right: auto;
 
     return (
 
-        <div className="m-auto w-[40%] h-[108vh] gap-2.5 mt-2 max-sm:m-0 max-sm:w-[45%]  inline-block">
+        <div className="m-auto w-[40%] max-sm:w-[100%] h-[108vh] gap-2.5 mt-2 inline-block">
 
 
-            <div className="min-h-[542px] px-5 pt-5 pb-10 bg-white border rounded-md">
+            <div className="min-h-[542px] px-5 pt-5 pb-10 border rounded-md">
                 <div className="flex gap-2 items-center"><span className="text-base leading-5 text-gray-700 font-semibold">Login</span>
                     <div className="bg-gray-300 h-[1px] grow"></div>
                 </div>
