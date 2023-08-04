@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Videoplayer from "./VideoPlayer";
 import Map from "./Map";
+import CardLabel from "../assets/CardLabel.svg"
 import { Link, useNavigate } from "react-router-dom";
 import Location from "../assets/inno_location.svg";
 
@@ -32,12 +33,12 @@ const Product = () => {
     if (!product) {
         return <p>Loading...</p>;
     }
-  
-  
-    return (
-        <div className=" w-[75%] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
 
-            <div className="w-[100%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col brg-[#F9FAFB]">
+
+    return (
+        <div className=" w-[76%] h-[1650px] px-2 max-sm:items-center bg-[#F9FAFB]">
+
+            <div className="w-[100%] max-sm:w-[100%] top-[55px] gap-5 flex flex-col bg-[#F9FAFB]">
 
                 <div className="w-full h-[30px] bg-white gap-5 mt-4 flex flex-row justify-between items-center">
 
@@ -80,8 +81,8 @@ const Product = () => {
                     <div className="h-full w-[80%] max-sm:w-full max-sm:h-[500px] flex flex-col max-sm:items-center  ">
 
                         <img src={product.picture} className="w-full h-[400px] max-sm:h-[200px] max-sm:rounded-t-lg rounded-tl-2xl" alt="Product" />
-
-
+                        <img src={CardLabel} className="w-32  absolute flex  pr-0 items-center gap-2" alt="cardlabel" />
+                      
                         <div className="w-full h-[350px] max-sm:h-[304px] p-5 gap-2.5 flex flex-col items-start self-stretch text-[#6B7280]">
                             <h1 className="font-bold text-lg">{product.name} {product.type.name}</h1>
                             <p className="max-xl:text-[13px] text-[14px] max-lg:text-[12px] max-md:text-[12px] max-sm:text-[11px]  font-normal font-['Open_Sans'] ">{product.description}</p>
@@ -105,7 +106,7 @@ const Product = () => {
                                 </div>
 
                             </div>
-                           
+
                             <div className='flex flex-row justify-center  w-[100%] bg-rede-200'>
                                 <img src={Location} className='w-[10%]' alt="innoslocation" />
                                 <div className="text-base font-semibold h-[50px] w-full font-[OpenSans]">
@@ -175,7 +176,7 @@ const Product = () => {
                                         <div className="flex flex-row w-full h-[24px] items-center gap-[5px]  ">
                                             {product.categories.map((category) => (
 
-                                                <p key={category.id} className="flex h-[24px] text-base items-center gap-[10px] max-sm:text-[11px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
+                                                <p key={category.id} className="flex h-[24px] text-sm items-center gap-[10px] max-sm:text-[11px] bg-[#E5E7EB] rounded-[20px] px-[14px]">
                                                     {category.name}</p>
 
 
@@ -202,7 +203,7 @@ const Product = () => {
                                         <div className="flex flex-row justify-center w-full h-[24px] items-center gap-[5px] ">
                                             {product.businessModels.map((model) => (
 
-                                                <p key={model.id} className="flex flex-row h-[24px] px-[5px] text-sm max-sm:text-[11px] max-sm:px-[0px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px] text-center">
+                                                <p key={model.id} className="flex flex-row h-[24px] px-[5px] text-xs max-sm:text-[11px] max-sm:px-[0px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px] text-center">
                                                     {model.name}</p>
 
 
@@ -239,7 +240,7 @@ const Product = () => {
                                         </h1>
                                         <div className="flex flex-row w-full h-[24px]  items-center gap-[5px] ">
 
-                                            <p key={product.trl.id} className="flex text-sm h-[29px] px-[18px] max-sm:text-[11px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px]">
+                                            <p key={product.trl.id} className="flex text-xs h-[29px] px-[18px] max-sm:text-[11px] items-center gap-[10px] bg-[#E5E7EB] rounded-[20px]">
                                                 {product.trl.name}</p>
 
                                         </div>
@@ -266,7 +267,7 @@ const Product = () => {
                                             Costs
                                         </h1>
                                         <div className="flex flex-row w-full h-[24px]  items-center gap-[5px] ">
-                                            <p className="flex h-[24px] items-center gap-[5px] rounded-[20px] max-sm:text-[11px] bg-[#E5E7EB] px-[14px] py-[5px]"> {product.investmentEffort}</p>
+                                            <p className="flex text-xs h-[24px] items-center gap-[5px] rounded-[20px] max-sm:text-[11px] bg-[#E5E7EB] px-[14px] py-[5px]"> {product.investmentEffort}</p>
 
                                         </div>
 

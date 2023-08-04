@@ -30,7 +30,7 @@ function App() {
 
       <Header />
 
-      <div className="flex h-[100vh] w-[100vw]  bg-yellow-500 fixed overflow-y-auto">
+      <div className="flex h-[100vh] w-[100vw] fixed overflow-y-auto">
 
 
         <Sidebar />

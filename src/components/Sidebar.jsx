@@ -7,6 +7,7 @@ import marketIcon from "../assets/market-stall-outline.svg"
 import eventsIcon from "../assets/baseline-event-busy.svg"
 import requestIcon from "../assets/speaker.svg"
 import projectIcon from "../assets/projects.svg"
+import productIcon from "../assets/products.svg"
 
 
 export default function Sidebar() {
@@ -42,6 +43,21 @@ export default function Sidebar() {
                                                 <span class="hover:no-underline text-base font-medium">Home</span>
                                             </div>
 
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li className='py-0.5 w-[250px] '>
+                                    <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
+                                        href="/home">
+
+                                        <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
+                                            <div class="flex items-center gap-2">
+                                                <img src={projectIcon} className='w-4' alt="home-icon" />
+
+                                                <span class="hover:no-underline text-base font-medium">Projects</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 ml-5"></div>
                                         </div>
                                     </a>
                                 </li>
@@ -120,21 +136,7 @@ export default function Sidebar() {
                                     </a>
                                 </li>
 
-                                <li className='py-0.5 w-[250px] '>
-                                    <a class="w-full relative flex items-center justify-center py-[13px] px-2.5 bg-transparent rounded-xl border-0 border-[#d1d5db] text-[#111827] text-xs font-normal leading-none no-underline cursor-pointer transition duration-[250] max-md:text-sm hover:no-underline hover:text-[#111827] hover:bg-[#d1d5db]"
-                                        href="/home">
-
-                                        <div class="w-full flex flex-wrap gap-y-1 justify-between text-left">
-                                            <div class="flex items-center gap-2">
-                                                <img src={projectIcon} className='w-4' alt="home-icon" />
-
-                                                <span class="hover:no-underline text-base font-medium">Projects</span>
-                                            </div>
-                                            <div class="flex items-center gap-2 ml-5"></div>
-                                        </div>
-                                    </a>
-                                </li>
-
+                                
                                
                                 
                             </ul>
