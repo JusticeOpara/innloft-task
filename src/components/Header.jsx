@@ -3,12 +3,14 @@ import getAppConfiguration from "../config";
 import Profile from "../assets/profile.png";
 import searchIcon from "../assets/inno_search.svg";
 import { Link } from "react-router-dom";
-import Menu from "../assets/menu.svg" 
+import Menu from "../assets/menu.svg"
+import homeIcon from "../assets/home-icon.svg"
 
 export default function () {
     const [isOpen, setIsOpen] = useState(false)
     const [openNotification, setOpenNotification] = useState(false)
     const [changeLanguage, setChangeLanguage] = useState(false)
+    const [isNavExpanded, setIsNavExpanded] = useState(false)
 
     const configuration = getAppConfiguration();
     console.log(configuration, "-getAppConfigration")
@@ -21,13 +23,17 @@ export default function () {
         display: configuration.display,
     };
 
+    const handleNav = () => {
+        setIsNavExpanded(!isNavExpanded)
+    }
+
 
     return (
 
         <header style={headerStyle} >
             <Link to="/product">
-                <img src={configuration.logo}  className="w-[140px] hr-[26.285715103149414px] absolute top-[14px] left-[30px] py-[5px] object-contain px-0 bg-white " 
-                   alt="Logo" />
+                <img src={configuration.logo} className="w-[140px] hr-[26.285715103149414px] absolute top-[14px] left-[30px] py-[5px] object-contain px-0 bg-white "
+                    alt="Logo" />
             </Link>
 
 
@@ -158,8 +164,26 @@ export default function () {
 
             </div>
 
-    
-            <img src={Menu} className="max-sm:block absolute top-2 right-[20px] max-2xl:hidden w-10 " alt="menu"/>
+
+            <img src={Menu} onClick={handleNav} className="max-sm:block absolute top-2 right-[20px] max-2xl:hidden w-10 " alt="menu" />
+
+            <div className={ isNavExpanded ? ' leading-loose  text-center text-xl absolute left-0 top-0 w-full mx-auto z-10 flex h-full mt-14 bg-primary ease-in-out flex-col bg-white' : 'absolute left-[-100%]'
+            }>
+                <ul onClick={handleNav} className='w-full p-4 py-0.5 '>
+
+                    <li className='w-fit mx-auto '><span class="text-base font-medium">Home</span>  </li>
+
+                    <li className='w-fit mx-auto'> <span className="text-base font-medium">Members</span>  </li>
+
+                    <li className="w-fit mx-auto"><span className="text-base font-medium"> Offers</span> </li>
+                    <li className="w-fit mx-auto"><span className="text-base font-medium"> Requests </span> </li>
+                    <li className="w-fit mx-auto"><span className="text-base font-medium"> Organsation</span> </li>
+
+                </ul>
+            </div>
+       
+
+
 
         </header>
     )
